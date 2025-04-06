@@ -1,0 +1,24 @@
+spring:
+  r2dbc:
+    url: r2dbc:h2:mem:///tasksdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    url: jdbc:h2:mem:tasksdb
+
+  application:
+    name: reactive-task-manager
+
+logging:
+  level:
+    org.springframework.web.reactive.function.server: DEBUG
