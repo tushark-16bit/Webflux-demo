@@ -10,13 +10,13 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 @Configuration
 public class Router {
 
-//    @Bean
-//    public RouterFunction<ServerResponse> route(TaskHandler handler) {
-//        return RouterFunctions.route()
-//                .GET("/hello", request ->
-//                        ServerResponse.ok().bodyValue("Hello, WebFlux!"))
-//                .GET("/tasks", handler::findAllTasks)
-//                .POST("/tasks", handler::createTask)
-//                .build();
-//    }
+    @Bean
+    public RouterFunction<ServerResponse> route(TaskHandler handler) {
+        return RouterFunctions.route()
+                .GET("/hello", request ->
+                        ServerResponse.ok().bodyValue("Hello, WebFlux!"))
+                .GET("/tasks", handler::findAllTasks)
+                .POST("/tasks", handler::createTask)
+                .build();
+    }
 }

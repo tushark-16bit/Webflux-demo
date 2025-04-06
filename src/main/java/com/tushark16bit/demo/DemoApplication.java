@@ -21,17 +21,17 @@ public class DemoApplication {
 }
 
 
-@Configuration
-class HelloRouter {
-
-	@Bean
-	public RouterFunction<ServerResponse> helloRoute() {
-		return RouterFunctions.route(GET("/hello"),
-				request -> ServerResponse.ok().bodyValue("Hello from WebFlux!"));
-	}
-
-	@Bean
-	public ApplicationRunner validateRoute(RouterFunction<ServerResponse> route) {
-		return args -> System.out.println("✅ RouterFunction bean loaded: " + route);
-	}
-}
+//@Configuration
+//class HelloRouter {
+//
+//	@Bean
+//	public RouterFunction<ServerResponse> helloRoute() {
+//		return RouterFunctions.route(GET("/hello"),
+//				request -> ServerResponse.ok().bodyValue("Hello from WebFlux!"));
+//	}
+//
+//	@Bean
+//	public ApplicationRunner validateRoute(RouterFunction<ServerResponse> route) {
+//		return args -> System.out.println("✅ RouterFunction bean loaded: " + route);
+//	}
+//}
